@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('abcee.jpg') no-repeat center center;
+            background-size: contain; /* Ensure the whole image is visible */
+            background-attachment: fixed; /* Fixes the background image in place */
+            background-color: #000; /* Fallback color in case the image does not cover */
+            color: #fff;
+            overflow: auto; /* Allows scrolling if the image is larger than the viewport */
+        }
+        .container {
+            background: rgba(0, 0, 0, 0); /* Transparent background */
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 80%; /* Decrease width */
+            max-width: 500px; /* Max width of the container */
+            height: 70vh; /* Increased height as a percentage of viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        h1 {
+            color: #ff6f61;
+            margin-bottom: 20px;
+            font-size: 2em; /* Increased size */
+        }
+        .congratulations-message {
+            font-size: 16px; /* Slightly larger size for better readability */
+            color: #4caf50;
+            margin-top: 20px;
+        }
+        .message-img {
+            max-width: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>Congratulations!</h1>
+        <p class="congratulations-message">
+            You’ve solved the puzzle and revealed your special birthday message:
+            <br><br>
+            <strong>Happy 20th Birthday, My Blush!</strong><br>
+            
+            It’s incredible to reflect on how we went from barely knowing each other in school to discovering something truly special between us later on. Even though you often play the part of a tough, indifferent shell, I see through it and recognize the depth of your care. I cherish the moments when your true feelings are revealed, and I hold close to my heart the pure, innocent essence that shines in your eyes. Your presence in my life is something I treasure deeply.
+            <br><br>
+            As your personal diary, I want you to know that, Even though I’m not into promises, know that if you ever find yourself alone, I’ll always be right here beside you. You’ve been my supporter and my idiot, and I am, without a doubt, your biggest fan, Mr. All-rounder. Let’s continue to grow and transform into our best selves together.
+            <br><br>
+           May this year bring you all the joy, success, and fulfillment your heart desires. Here’s to celebrating you today. Wishing you a day as wonderful as you are!
+            <br><br>
+ <br><br>
+ <br>
+ 
+        </p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const container = document.getElementById('container');
+            const bgImage = new Image();
+            bgImage.src = 'abcee.jpg'; // Ensure this matches the image path
+            bgImage.onload = function() {
+                const containerHeight = bgImage.height * (container.clientWidth / bgImage.width);
+                container.style.height = containerHeight + 'px';
+            };
+        };
+    </script>
+</body>
+</html>

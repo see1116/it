@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('abcdi.jpg') no-repeat center center;
+            background-size: contain;
+            background-attachment: fixed;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 80%; /* Reduced width from 90% to 80% */
+            max-width: 500px; /* Reduced max-width from 600px to 500px */
+            position: relative;
+        }
+        h1 {
+            color: #ff6f61;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .puzzle {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #eee;
+        }
+        input[type="number"] {
+            padding: 10px;
+            border: 2px solid #ff6f61;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+            width: calc(100% - 130px);
+            max-width: 200px;
+            background-color: #fff;
+            color: #333;
+        }
+        button {
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e55b50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Himanshu!</h1>
+        <p>Welcome to your special birthday surprise!</p>
+        <div class="puzzle">
+            Solve the puzzle below to reveal your birthday message:
+            <br><br>
+            <strong>What number makes this equation true?</strong><br>
+            256 - ? = 240
+        </div>
+        <input type="number" id="puzzle-answer" placeholder="Enter your answer here" />
+        <button onclick="checkAnswer()">Submit Answer</button>
+    </div>
+    <script>
+        function checkAnswer() {
+            const answer = parseInt(document.getElementById('puzzle-answer').value);
+            if (answer === 16) { // Correct answer for 256 - ? = 240
+                window.location.href = 'part2.html'; // Use relative path
+            } else {
+                alert('Try again!');
+            }
+        }
+    </script>
+</body>
+</html>
+
